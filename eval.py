@@ -49,7 +49,7 @@ def parse_args(argv=None):
     parser.add_argument('--trained_model',
                         default=None, type=str,
                         help='Trained state_dict file path to open. If "interrupt", this will open the interrupt file.')
-    parser.add_argument('--top_k', default=5, type=int,
+    parser.add_argument('--top_k', default=20, type=int,
                         help='Further restrict the number of predictions to parse')
     parser.add_argument('--cuda', default=True, type=str2bool,
                         help='Use cuda to evaulate model')
@@ -113,7 +113,7 @@ def parse_args(argv=None):
                         help='An input folder of images.')
     parser.add_argument('--save_images', default=None, type=str,
                         help='An output folder to save detected images.')
-    parser.add_argument('--score_threshold', default=0, type=float,
+    parser.add_argument('--score_threshold', default=0.05, type=float,
                         help='Detections with a score under this threshold will not be considered. This currently only works in display mode.')
     parser.add_argument('--dataset', default=None, type=str,
                         help='If specified, override the dataset specified in the config with this one (example: kitti_dual).')

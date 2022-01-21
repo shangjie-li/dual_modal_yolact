@@ -143,7 +143,26 @@ kitti_dual_complex = dataset_base.copy({
     'valid_info': '/home/lishangjie/data/KITTI/kitti_dual_complex/annotations/val_set_car_person.json',
     
     'has_gt': True,
+    
     'class_names': ('car', 'person'),
+    'label_map': None
+})
+
+seumm_dual = dataset_base.copy({
+    'name': 'SEUMM Dual',
+    
+    'train_images1': './data/seumm_dual/visible/',
+    'train_images2': './data/seumm_dual/lwir/',
+    'train_info':   './data/seumm_dual/annotations/instances_train.json',
+    
+    'valid_images1': './data/seumm_dual/visible/',
+    'valid_images2': './data/seumm_dual/lwir/',
+    'valid_info':   './data/seumm_dual/annotations/instances_val.json',
+
+    'has_gt': True,
+    
+    'class_names': ('pedestrian', 'cyclist', 'car', 'bus', 'truck', 'traffic_light', 'traffic_sign'),
+    'label_map': None
 })
 
 
