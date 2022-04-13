@@ -108,7 +108,7 @@ dataset_base = Config({
     'label_map': None
 })
 
-kitti_dual = dataset_base.copy({
+kitti_dual_dataset = dataset_base.copy({
     'name': 'KITTI Dual',
     
     'train_info': './data/kitti_dual/annotations/instances_train.json',
@@ -117,7 +117,7 @@ kitti_dual = dataset_base.copy({
     'has_gt': True,
 })
 
-seumm_dual = dataset_base.copy({
+seumm_dual_dataset = dataset_base.copy({
     'name': 'SEUMM Dual',
     
     'train_images1': './data/seumm_dual/visible/',
@@ -299,8 +299,8 @@ fpn_base = Config({
 # ----------------------- CONFIG DEFAULTS ----------------------- #
 
 coco_base_config = Config({
-    'dataset': kitti_dual,
-    'num_classes': len(kitti_dual.class_names) + 1, # This should include the background class
+    'dataset': kitti_dual_dataset,
+    'num_classes': len(kitti_dual_dataset.class_names) + 1, # This should include the background class
 
     'max_iter': 400000,
 
