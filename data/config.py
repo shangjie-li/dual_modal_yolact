@@ -111,41 +111,10 @@ dataset_base = Config({
 kitti_dual = dataset_base.copy({
     'name': 'KITTI Dual',
     
-    'train_info': './data/kitti_dual/annotations/instances_standard_train.json',
-    'valid_info': './data/kitti_dual/annotations/instances_standard_val.json',
+    'train_info': './data/kitti_dual/annotations/instances_train.json',
+    'valid_info': './data/kitti_dual/annotations/instances_val.json',
     
     'has_gt': True,
-})
-
-kitti_dual_custom = dataset_base.copy({
-    'name': 'KITTI Dual Custom',
-    
-    'train_images1': '/home/lishangjie/data/KITTI/kitti_dual/images',
-    'train_images2': '/home/lishangjie/data/KITTI/kitti_dual/lidar_ddm_jet',
-    'train_info': '/home/lishangjie/data/KITTI/kitti_dual/annotations/instances_standard_train.json',
-    
-    'valid_images1': '/home/lishangjie/data/KITTI/kitti_dual/images',
-    'valid_images2': '/home/lishangjie/data/KITTI/kitti_dual/lidar_ddm_jet',
-    'valid_info': '/home/lishangjie/data/KITTI/kitti_dual/annotations/instances_standard_val.json',
-    
-    'has_gt': True,
-})
-
-kitti_dual_complex = dataset_base.copy({
-    'name': 'KITTI Dual Complex',
-    
-    'train_images1': '/home/lishangjie/data/KITTI/kitti_dual_complex/images',
-    'train_images2': '/home/lishangjie/data/KITTI/kitti_dual_complex/lidar_ddm_jet',
-    'train_info': '/home/lishangjie/data/KITTI/kitti_dual_complex/annotations/train_set_car_person.json',
-    
-    'valid_images1': '/home/lishangjie/data/KITTI/kitti_dual_complex/images',
-    'valid_images2': '/home/lishangjie/data/KITTI/kitti_dual_complex/lidar_ddm_jet',
-    'valid_info': '/home/lishangjie/data/KITTI/kitti_dual_complex/annotations/val_set_car_person.json',
-    
-    'has_gt': True,
-    
-    'class_names': ('car', 'person'),
-    'label_map': None
 })
 
 seumm_dual = dataset_base.copy({

@@ -62,7 +62,7 @@ def draw_annotation(img, mask, box, classname, color, score=None):
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         if len(sys.argv) == 2:
-            # Usage: python dataset_player.py kitti_dual_custom
+            # Usage: python dataset_player.py kitti_dual
             dataset_name = sys.argv[1]
             set_dataset(dataset_name)
             print('Using dataset:')
